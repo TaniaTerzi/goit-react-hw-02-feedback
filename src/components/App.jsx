@@ -23,6 +23,7 @@ import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Statistics from "./Statistics/Statistics"
 import Notification from "./Notification/Notification";
 import Section from "./Section/Section";
+import css from './App.module.css'
 
 
 export class App extends Component {
@@ -31,6 +32,7 @@ export class App extends Component {
         neutral: 0,
         bad: 0
       };
+   
     handleIncrementGood = () => {
       this.setState(prevState => ({           
         good: prevState.good + 1
@@ -52,9 +54,8 @@ export class App extends Component {
         const positiveFeedback = this.countPositiveFeedbackPercentage()
         const isFeedbsck = (totalFeedback > 0)
           return (
-            <div>
-              {/* <h1> Please leave feedback </h1> */}
-              <Section title="Please leave feedback">
+            <div className={css.conteiner}>
+                <Section title="Please leave feedback">
                 <FeedbackOptions 
                       onIncrementGood={this.handleIncrementGood}
                       onIncrementNeutral={this.handleIncrementNeutral}
