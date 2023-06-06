@@ -12,7 +12,7 @@ const FeedbackOptions = ( {onIncrementGood, onIncrementNeutral, onIncrementBad} 
 export default FeedbackOptions
 
 FeedbackOptions.propTypes = {
-    FeedbackOptions: PropTypes.func,
-    onIncrementNeutral: PropTypes.func,
-    onIncrementBad: PropTypes.func,
+    onIncrementGood: PropTypes.func.isRequired,
+    onIncrementNeutral: PropTypes.func.isRequired,
+    onIncrementBad: PropTypes.func.isRequired,
   };
